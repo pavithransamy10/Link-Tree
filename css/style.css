@@ -9,7 +9,7 @@
 
   /* You can change the background color by typing the color code. (If you do not enter a background-image image, the background-color will be active.) */
   --background_color: #000;
-  --background_image: url("../img/wallpaper.png");
+  --background_image: url("../img/wallpaper2.png");
 
   /* You can change the frame thickness and color of the picture by typing the number of pixels and the color code. */
   --image_border_color: #1f232e;
@@ -60,6 +60,7 @@ body {
   flex-wrap: wrap;
 }
 
+
 .flex_column_center {
   display: flex;
   flex-direction: column;
@@ -98,14 +99,24 @@ body {
   margin-bottom: 0.5em;
 }
 
-.header_text h1 {
-  color: var(--title_color);
-  font-size: 2em;
+.header_text {
+  position: relative; /* Required for positioning the background */
 }
 
+/* Semi-transparent background for h1 */
+.header_text h1 {
+  color: #000000;
+  font-size: 2em;
+  background-color: rgba(255, 255, 255, 0.7); /* Adjust the alpha value to control transparency */
+  padding: 1px; /* Add some padding to create spacing between text and background */
+}
+
+/* Semi-transparent background for h2 */
 .header_text h2 {
-  color: var(--description_color);
+  color: #000000;
   font-size: 1.5em;
+  background-color: rgba(255, 255, 255, 0.7); /* Adjust the alpha value to control transparency */
+  padding: 5px; /* Add some padding to create spacing between text and background */
 }
 
 /* Social Media Icons Codes */
@@ -115,7 +126,7 @@ body {
 }
 
 .header_svg_item {
-  width: 2.1em;
+  width: 3.1em;
   height: 2.1em;
   cursor: pointer;
 }
@@ -125,7 +136,8 @@ body {
 }
 
 .header_svg_item svg {
-  fill: var(--svg_color);
+	
+  fill: #000000;
 }
 
 /* Menu Codes */
